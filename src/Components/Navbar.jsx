@@ -9,6 +9,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
+    { name: "Skills", path: "/skills" },
     { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];
@@ -16,7 +17,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-4 left-0 right-0 z-50 px-4">
       <nav className="max-w-7xl mx-auto">
-        {/* Main Navbar */}
+       
         <div className="bg-black/80 backdrop-blur-xl border border-[#D4AF37]/20 rounded-full px-6 md:px-8 py-4 flex items-center justify-between">
           
           {/* Logo */}
@@ -60,7 +61,7 @@ export default function Navbar() {
 
           {/* Right Side */}
           <div className="flex items-center gap-4">
-            {/* Desktop CTA */}
+            
             <NavLink
               to="/contact"
               className="hidden md:flex items-center justify-center h-10 w-10 rounded-full bg-[#D4AF37] text-black font-bold hover:rotate-12 transition-transform duration-300"
@@ -82,7 +83,7 @@ export default function Navbar() {
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
             isOpen
-              ? "max-h-[500px] opacity-100 mt-4"
+              ? "max-h-125 opacity-100 mt-4"
               : "max-h-0 opacity-0"
           }`}
         >

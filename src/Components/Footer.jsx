@@ -63,7 +63,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-[#B7D3A8] hover:text-[#D4AF37] transition"
               >
                 <Mail size={18} />
-                <span>faeeqa@example.com</span>
+                <span>faiqahahmadi015@gmail.com</span>
               </a>
 
               <a
@@ -71,7 +71,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-[#B7D3A8] hover:text-[#D4AF37] transition"
               >
                 <Phone size={18} />
-                <span>+123 456 789</span>
+                <span>+93 793 098 525</span>
               </a>
             </div>
 
