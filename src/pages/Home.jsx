@@ -1,168 +1,141 @@
 import Hero from "../sections/Hero";
 import FadeIn from "../Components/Animations/FadeIn";
 import { Link } from "react-router-dom";
+
 export default function Home() {
-  const skills = [
-    "Adobe Photoshop",
-    "Adobe Illustrator",
-    "Adobe After Effects",
-    "Creative Design",
-    "Visual Storytelling",
-    "Attention to Detail",
+  const services = [
+    "Graphic Design",
+    "Social Media Design",
+    "Brand Identity",
+    "Marketing Materials",
   ];
 
-  const services = [
-    {
-      title: "Graphic Design",
-      desc: "Creating professional and visually appealing designs tailored to each project.",
-    },
-    {
-      title: "Social Media Design",
-      desc: "Designing engaging content that helps brands connect with their audience.",
-    },
-    {
-      title: "Brand Identity",
-      desc: "Building memorable visual identities that reflect a brand's personality.",
-    },
-    {
-      title: "Marketing Materials",
-      desc: "Designing banners, posters, and promotional graphics for print and digital use.",
-    },
+  const work = [
+    { title: "Brand Identity", desc: "Modern logo system & identity design" },
+    { title: "Social Media Kit", desc: "Engaging Instagram content system" },
+    { title: "Poster Design", desc: "Promotional visual storytelling" },
   ];
 
   return (
     <div className="bg-[#F7F3E9] overflow-hidden">
+
       <Hero
         badge="Graphic Designer"
-        title="Creative Designs That Tell Your Story"
-        subtitle="Helping brands communicate through modern, memorable, and visually engaging designs."
+        title="Design That Feels Intentional"
+        subtitle="I create visual identities and stories that connect brands with people."
         image="/FaeeqaLogo.jpg"
       />
 
-      {/* About */}
+      {/* INTRO */}
       <FadeIn>
-        <section className="py-24 bg-white">
-          <div className="max-w-6xl mx-auto px-6">
-            <span className="text-[#D4AF37] uppercase tracking-widest text-sm font-medium">
-              About Me
-            </span>
+        <section className="py-28 bg-white">
+          <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-            <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#0F3D2E]">
-              Passionate About Creative Design
-            </h2>
+            <div>
+              <span className="text-[#D4AF37] uppercase text-sm tracking-widest">
+                Overview
+              </span>
 
-            <p className="mt-6 text-gray-600 leading-8 max-w-3xl">
-              I'm Faeeqa Ahmadi, a graphic designer with experience in
-              Photoshop and Illustrator. I enjoy transforming ideas into
-              creative and meaningful visual designs that communicate clearly
-              and leave a lasting impression.
-            </p>
+              <h2 className="mt-4 text-4xl font-bold text-[#0F3D2E] leading-tight">
+                I turn ideas into visual systems, not just designs.
+              </h2>
 
-            <p className="mt-4 text-gray-600 leading-8 max-w-3xl">
-              I focus on quality, attention to detail, and understanding each
-              client's unique vision. While my experience with After Effects is
-              still growing, I am always eager to learn new tools and expand my
-              creative skills.
-            </p>
-          </div>
-        </section>
-      </FadeIn>
-
-      {/* Skills */}
-      <FadeIn>
-        <section className="py-24 bg-[#0F3D2E]">
-          <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-center text-4xl font-bold text-white mb-12">
-              Skills & Expertise
-            </h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {skills.map((skill) => (
-                <div
-                  key={skill}
-                  className="bg-white/5 backdrop-blur-sm border border-[#D4AF37]/20 rounded-2xl p-6 hover:-translate-y-2 hover:border-[#D4AF37] transition-all duration-300"
-                >
-                  <h3 className="text-white font-medium">{skill}</h3>
-                </div>
-              ))}
+              <p className="mt-6 text-gray-600 leading-8">
+                My focus is on clarity, storytelling, and emotional connection.
+                Every design decision is intentional and purpose-driven.
+              </p>
             </div>
+
+            <div className="bg-[#0F3D2E] rounded-2xl p-10 text-white">
+              <h3 className="text-xl font-bold">Design Approach</h3>
+              <p className="mt-4 text-gray-300 leading-7">
+                I don’t just decorate. I structure meaning through typography,
+                spacing, and visual hierarchy.
+              </p>
+            </div>
+
           </div>
         </section>
       </FadeIn>
 
-      {/* Services */}
+      {/* WORK PREVIEW (NEW - IMPORTANT UX BLOCK) */}
       <FadeIn>
-        <section className="py-24 bg-[#F7F3E9]">
+        <section className="py-28 bg-[#0F3D2E]">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-center text-4xl font-bold text-[#0F3D2E] mb-12">
-              What I Do
+
+            <h2 className="text-4xl font-bold text-white text-center">
+              Selected Work
             </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service) => (
+            <div className="mt-14 grid md:grid-cols-3 gap-8">
+              {work.map((item) => (
                 <div
-                  key={service.title}
-                  className="bg-white rounded-2xl p-8 shadow-sm hover:-translate-y-2 hover:shadow-xl transition-all duration-300"
+                  key={item.title}
+                  className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:-translate-y-2 transition"
                 >
-                  <h3 className="text-[#0F3D2E] font-bold text-lg mb-4">
-                    {service.title}
+                  <h3 className="text-white font-bold text-lg">
+                    {item.title}
                   </h3>
-
-                  <p className="text-gray-600 leading-7 text-sm">
-                    {service.desc}
+                  <p className="text-gray-300 mt-2 text-sm">
+                    {item.desc}
                   </p>
                 </div>
               ))}
             </div>
+
           </div>
         </section>
       </FadeIn>
 
-      {/* Philosophy */}
+      {/* SERVICES (modern hover UX instead of heavy cards) */}
       <FadeIn>
-        <section className="py-24 bg-[#111111]">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <span className="text-[#D4AF37] uppercase tracking-widest text-sm">
-              Design Philosophy
-            </span>
+        <section className="py-28 bg-white">
+          <div className="max-w-5xl mx-auto px-6">
 
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
-              Creativity Meets Purpose
+            <h2 className="text-4xl font-bold text-[#0F3D2E] text-center">
+              What I Do
             </h2>
 
-            <p className="text-gray-400 leading-8 mt-8">
-              I believe great design is more than aesthetics. It should tell a
-              story, communicate clearly, and create meaningful connections.
-              Every project is an opportunity to bring ideas to life through
-              thoughtful and impactful design.
-            </p>
+            <div className="mt-14 space-y-4">
+              {services.map((s) => (
+                <div
+                  key={s}
+                  className="group flex justify-between items-center border-b border-gray-200 py-5 hover:px-4 transition-all"
+                >
+                  <p className="text-lg font-medium text-[#0F3D2E]">
+                    {s}
+                  </p>
+                  <span className="text-gray-400 group-hover:text-[#D4AF37]">
+                    →
+                  </span>
+                </div>
+              ))}
+            </div>
+
           </div>
         </section>
       </FadeIn>
-
-
 
       {/* CTA */}
       <FadeIn>
-        <section className="py-24 bg-linear-to-r from-[#F7F3E9] to-[#EFE7D8]">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0F3D2E]">
-              Let's Create Something Beautiful Together
-            </h2>
+        <section className="py-28 bg-[#F7F3E9] text-center">
+          <h2 className="text-4xl font-bold text-[#0F3D2E]">
+            Let’s build something meaningful
+          </h2>
 
-            <p className="mt-6 text-gray-600 leading-8">
-              Whether you need branding, social media designs, or creative
-              visuals, I'd love to help bring your ideas to life.
-            </p>
+          <p className="mt-6 text-gray-600">
+            I’m open to freelance work and collaborations.
+          </p>
 
-            <Link to="/contact"
-              className="mt-10 inline-flex items-center justify-center px-10 py-4 rounded-full bg-linear-to-r from-[#D4AF37] to-[#C9A227]
-           text-white font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
-              Get In Touch
-            </Link>
-          </div>
+          <Link
+            to="/contact"
+            className="mt-10 inline-block px-10 py-4 bg-[#D4AF37] text-white rounded-full hover:scale-105 transition"
+          >
+            Contact Me
+          </Link>
         </section>
       </FadeIn>
+
     </div>
   );
 }

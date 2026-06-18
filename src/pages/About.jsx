@@ -150,36 +150,6 @@ export default function About() {
         </section>
       </FadeIn>
 
-      {/* CTA */}
-      <FadeIn>
-        <section className="py-28 bg-linear-to-r from-[#F7F3E9] to-[#EFE7D8]">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-
-            <h2 className="text-4xl font-bold text-[#0F3D2E]">
-              Let’s Build Something Together
-            </h2>
-
-            <p className="mt-6 text-gray-600 leading-8">
-              If you need branding, social media design, or visual identity work,
-              I’m ready to help bring your ideas to life.
-            </p>
-
-            <Link
-              to="/contact"
-              className="
-                mt-10 inline-flex px-10 py-4 rounded-full
-                bg-[#D4AF37] text-white font-semibold
-                hover:scale-105 hover:shadow-xl
-                transition-all duration-300
-              "
-            >
-              Contact Me
-            </Link>
-
-          </div>
-        </section>
-      </FadeIn>
-
     </div>
   );
 }
