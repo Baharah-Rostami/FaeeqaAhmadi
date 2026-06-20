@@ -1,7 +1,7 @@
 import Hero from "../sections/Hero";
 import FadeIn from "../Components/Animations/FadeIn";
 import { expertise, processSteps, softwareSkills } from "../Data/Skill";
-
+import { useProgressOnView } from "../hook/useProgress";
 
 export default function Skills() {
   return (
@@ -32,10 +32,9 @@ export default function Skills() {
                     <div
                       key={index}
                       className={`bg-white border border-[#D9CBB6] rounded-3xl p-8 shadow-sm hover:-translate-y-2 transition duration-300
-                        ${
-                          item.featured
-                            ? "md:col-span-2 md:row-span-2"
-                            : ""
+                        ${item.featured
+                          ? "md:col-span-2 md:row-span-2"
+                          : ""
                         }`}
                     >
                       <Icon className="text-4xl text-[#D4AF37] mb-5" />
@@ -92,28 +91,32 @@ export default function Skills() {
               </h2>
 
               <div className="space-y-8">
-                {softwareSkills.map((skill, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-[#2A2A2A]">
-                        {skill.name}
-                      </span>
+                {softwareSkills.map((skill, index) => {
+                  const { ref, width } = useProgressOnView(skill.percentage);
 
-                      <span className="text-[#B8860B] font-semibold">
-                        {skill.percentage}%
-                      </span>
-                    </div>
+                  return (
+                    <div key={index} ref={ref}>
+                      <div className="flex justify-between mb-2">
+                        <span className="font-medium text-[#2A2A2A]">
+                          {skill.name}
+                        </span>
 
-                    <div className="h-3 bg-[#EFE6D7] rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-[#D4AF37] rounded-full"
-                        style={{
-                          width: `${skill.percentage}%`,
-                        }}
-                      />
+                        <span className="text-[#B8860B] font-semibold">
+                          {Math.round(width)}%
+                        </span>
+                      </div>
+
+                      <div className="h-3 bg-[#EFE6D7] rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-[#D4AF37] rounded-full transition-all"
+                          style={{
+                            width: `${width}%`,
+                          }}
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </FadeIn>
