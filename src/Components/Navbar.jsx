@@ -26,7 +26,7 @@ export default function Navbar() {
           >
             <Palette size={22} className="text-[#D4AF37]" />
             <span className="text-white">
-              FAIQA<span className="text-[#D4AF37]">.</span>
+              FAEEQA<span className="text-[#D4AF37]">.</span>
             </span>
           </NavLink>
 
