@@ -1,16 +1,91 @@
-# React + Vite
+# 🎨 Faeeqa Ahmad Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website designed and developed to showcase the creative work, skills, and design journey of **Faeeqa Ahmadi**, a Graphic Designer passionate about visual storytelling, branding, and creative design.
 
-Currently, two official plugins are available:
+## ✨ Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This portfolio highlights selected projects, design expertise, and professional information in a clean and elegant user experience. The website was built with a focus on modern aesthetics, smooth interactions, and responsive design to ensure a seamless experience across all devices.
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Modern and responsive design
+* Interactive project showcase
+* Dynamic project details pages
+* Professional About section
+* Skills and expertise presentation
+* Contact page with modern UI
+* Smooth hover effects and transitions
+* Mobile-friendly layout
+* Clean and organized code structure
 
-## Expanding the ESLint configuration
+## 📂 Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Home
+
+An engaging introduction featuring Faeeqa's design philosophy, services, and featured content.
+
+### About
+
+A dedicated section highlighting professional background, creative skills, and design experience.
+
+### Skills
+
+Showcases design tools, creative strengths, and areas of expertise.
+
+### Projects
+
+A curated collection of graphic design projects displayed in a modern grid layout.
+
+### Project Details
+
+Individual project pages featuring detailed project information, categories, tools used, and project descriptions.
+
+### Contact
+
+A modern contact page allowing potential clients and collaborators to connect easily.
+
+## 🛠️ Built With
+
+* React.js
+* React Router DOM
+* Tailwind CSS
+* React Icons
+
+## 🎯 Design Goals
+
+The portfolio was created to:
+
+* Showcase professional graphic design work
+* Present projects in a visually appealing way
+* Strengthen personal branding
+* Provide a smooth and intuitive user experience
+* Maintain accessibility across different screen sizes
+
+## 📱 Responsive Design
+
+The website is fully responsive and optimized for:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile Devices
+
+## 📸 Project Categories
+
+The portfolio includes work such as:
+
+* Branding Design
+* Business Card Design
+* Visual Identity
+* Editorial Design
+* Print Design
+* UI Concepts
+* Creative Graphic Design Projects
+
+## 📬 Contact
+
+For collaborations, freelance opportunities, or design inquiries, visitors can reach out through the contact section of the portfolio.
+
+---
+
+Designed with creativity and attention to detail.
